@@ -1,103 +1,123 @@
-/* Estilos generales para todas las vistas del cajero */
+/* Estilo general */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #004a99;
-    color: white;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    background-color: #f4f4f4;
+    color: #0033a0;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    justify-content: center;
 }
 
+/* Encabezados */
 h1, h2 {
-    color: #ffcc00;
-    margin-bottom: 30px;
+    color: #0033a0;
     text-align: center;
     text-transform: uppercase;
+    background-color: #ffd100;
+    padding: 12px 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
+/* Contenedor principal */
 .container {
-    background-color: #0066cc;
-    border: 2px solid #ffcc00;
-    border-radius: 10px;
+    background-color: #ffffff;
+    border: 4px solid #ffd100;
+    border-radius: 20px;
     padding: 30px;
     width: 90%;
     max-width: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
     margin-bottom: 20px;
 }
 
+/* Formularios */
 form {
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 label {
-    display: block;
-    margin-bottom: 8px;
     font-weight: bold;
+    color: #0033a0;
     text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 14px;
 }
 
+/* Inputs */
 input[type="text"],
 input[type="password"],
 input[type="number"],
 select {
     width: 100%;
-    padding: 12px;
-    border: 2px solid #ffcc00;
-    border-radius: 5px;
-    background-color: #f8f8f8;
+    padding: 14px;
+    border: 2px solid #0033a0;
+    border-radius: 10px;
+    background-color: #ffffff;
     font-size: 16px;
+    color: #0033a0;
     box-sizing: border-box;
 }
 
+/* Botones principales */
 button[type="submit"],
 .btn-primary {
-    background-color: #ffcc00;
-    color: #004a99;
+    background-color: #ffd100;
+    color: #0033a0;
     border: none;
-    padding: 12px;
-    border-radius: 5px;
+    padding: 16px;
+    border-radius: 12px;
     font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
+    font-size: 18px;
     text-transform: uppercase;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
     width: 100%;
     margin-top: 10px;
 }
 
 button[type="submit"]:hover,
 .btn-primary:hover {
-    background-color: #ffdd33;
+    background-color: #e6b800;
+    transform: scale(1.05);
 }
 
+/* Botones secundarios */
 .btn-secondary {
-    background-color: #0066cc;
-    color: white;
-    border: 2px solid #ffcc00;
-    padding: 10px 15px;
-    border-radius: 5px;
+    background-color: #0033a0;
+    color: #ffffff;
+    border: 2px solid #ffd100;
+    padding: 12px 18px;
+    border-radius: 10px;
     text-decoration: none;
     text-align: center;
     transition: all 0.3s;
     display: inline-block;
     margin-top: 15px;
+    font-weight: bold;
 }
 
 .btn-secondary:hover {
-    background-color: #ffcc00;
-    color: #004a99;
+    background-color: #ffd100;
+    color: #0033a0;
 }
 
-/* Estilos para listas */
+/* Listas de cuentas */
 ul.cuenta-list {
     list-style: none;
     padding: 0;
@@ -105,16 +125,18 @@ ul.cuenta-list {
 }
 
 ul.cuenta-list li {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #f0f0f0;
     padding: 15px;
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid #ffd100;
+    color: #0033a0;
 }
 
-/* Estilos para tablas */
+/* Tablas */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -122,40 +144,41 @@ table {
 }
 
 table th {
-    background-color: #ffcc00;
-    color: #004a99;
-    padding: 12px;
+    background-color: #ffd100;
+    color: #0033a0;
+    padding: 14px;
     text-align: left;
+    font-size: 16px;
 }
 
 table td {
-    padding: 10px;
-    border-bottom: 1px solid rgba(255, 204, 0, 0.3);
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
 }
 
 table tr:hover {
-    background-color: rgba(255, 204, 0, 0.1);
+    background-color: #fff9d6;
 }
 
 /* Mensajes */
 .mensaje-exito {
-    color: #66ff66;
+    color: #009b3a;
     font-weight: bold;
     text-align: center;
     margin: 15px 0;
 }
 
 .mensaje-error {
-    color: #ff6666;
+    color: #da291c;
     font-weight: bold;
     text-align: center;
     margin: 15px 0;
 }
 
-/* Información adicional */
+/* Info adicional */
 .info-text {
     font-style: italic;
     margin-left: 10px;
     font-weight: bold;
-    color: #ffcc00;
+    color: #0033a0;
 }

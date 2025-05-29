@@ -6,23 +6,23 @@
     <link rel="stylesheet" th:href="@{/styles/cajero.css}">
 </head>
 <body>
-    <div class="container">
-        <h2><i class="fas fa-wallet"></i> Tus cuentas</h2>
-        
-        <ul class="cuenta-list">
-            <li th:each="cuenta : ${cuentas}">
+<div class="container">
+    <h2><i class="fas fa-wallet"></i> Tus cuentas</h2>
+
+    <ul class="cuenta-list">
+        <li th:each="cuenta : ${cuentas}">
                 <span>
-                    <i class="fas fa-credit-card"></i> 
-                    <span th:text="${cuenta.numero}"></span> - 
+                    <i class="fas fa-credit-card"></i>
+                    <span th:text="${cuenta.numero}"></span> -
                     $<span th:text="${#numbers.formatDecimal(cuenta.saldo, 1, 2)}"></span>
                 </span>
-                <a th:href="@{'/cajero/movimientos/' + ${cuenta.numero}}" class="btn-secondary">
-                    <i class="fas fa-list"></i> Movimientos
-                </a>
-            </li>
-        </ul>
-        
-        <a th:href="@{/cajero/menu}" class="btn-secondary"><i class="fas fa-arrow-left"></i> Volver al menú</a>
-    </div>
+            <a th:href="@{'/cajero/movimientos/' + ${cuenta.numero}}" class="btn-secondary">
+                <i class="fas fa-list"></i> Movimientos
+            </a>
+        </li>
+    </ul>
+
+    <a th:href="@{/cajero/menu}" class="btn-secondary"><i class="fas fa-arrow-left"></i> Volver al menú</a>
+</div>
 </body>
 </html>
